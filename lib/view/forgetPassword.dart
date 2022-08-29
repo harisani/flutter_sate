@@ -25,7 +25,7 @@ class ForgetPassoword extends StatelessWidget {
                   alignment: Alignment.center,
                   child: TextField(
                     decoration:
-                        InputDecoration(hintText: 'Masukan asda E-mail anda'),
+                        InputDecoration(hintText: 'Masukan E-mail anda'),
                   ),
                 ),
                 Container(
