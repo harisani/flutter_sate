@@ -9,7 +9,7 @@ class ForgetPassoword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomSheet: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+          padding: const EdgeInsets.fromLTRB(10, 10, 10, 20),
           child: Container(
               width: 500.0,
               // margin: EdgeInsets.fromLTRB(
@@ -47,7 +47,7 @@ class ForgetPassoword extends StatelessWidget {
               padding: EdgeInsets.all(10),
               child: Text(
                 "Masukan alamat email yang terdaftar untuk mendapatkan instruksi pemulihan password",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),textAlign: TextAlign.center,
               ),
             ),
             Container(
