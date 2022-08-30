@@ -9,11 +9,11 @@ class ForgetPassoword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomSheet: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 10, 10, 50),
+          padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
           child: Container(
-            width: 500.0,
-              margin: EdgeInsets.fromLTRB(
-                  0, MediaQuery.of(context).size.height / 3, 0, 0),
+              width: 500.0,
+              // margin: EdgeInsets.fromLTRB(
+              //     0, MediaQuery.of(context).size.height / 6, 0, 0),
               height: 50,
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
               child: ElevatedButton(
@@ -34,20 +34,37 @@ class ForgetPassoword extends StatelessWidget {
           ),
           backgroundColor: Colors.white,
         ),
-        body: Container(
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.fromLTRB(
-                0, MediaQuery.of(context).size.height / 4, 0, 0),
-            child: ListView(
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.center,
-                  child: TextField(
-                    decoration:
-                        InputDecoration(hintText: 'Masukan E-mail anda'),
-                  ),
+        body: ListView(
+          children: <Widget>[
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+                child: Image.asset(
+                  "assets/images/email.png",
+                  width: MediaQuery.of(context).size.width,
+                )),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                "Masukan alamat email yang terdaftar untuk mendapatkan instruksi pemulihan password",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Masukan Alamat E-mail anda',
+                  labelStyle: TextStyle(color: Colors.grey),
                 ),
-              ],
-            )));
+              ),
+            ),
+            Container(
+              child: SizedBox(
+                height: 120,
+              ),
+            ),
+          ],
+        ));
   }
 }
