@@ -65,18 +65,105 @@ class Home extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: Positioned(
-                    top: 250.0,
-                    child:Container(
-                      height: 150,
-                      width: MediaQuery.of(context).size.width,
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10))
+                      top: 250.0,
+                      child: Container(
+                        height: 150,
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          elevation: 6.0,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: <Widget>[
+                                        SizedBox(
+                                          width: 30,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image(
+                                                  image: AssetImage(
+                                                      "assets/images/icon_jurnal.png")),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Container(
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "assets/images/icon_materi.png")),
+                                        ),
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Container(
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "assets/images/icon_buku.png")),
+                                        ),
+                                        SizedBox(
+                                          width: 30,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: <Widget>[
+                                        SizedBox(
+                                          width: 25,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              child: Image(
+                                                  image: AssetImage(
+                                                      "assets/images/icon_web.png")),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Container(
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "assets/images/icon_kalender.png")),
+                                        ),
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Container(
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "assets/images/icon_skripsi.png")),
+                                        ),
+                                        SizedBox(
+                                          width: 25,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        elevation: 6.0,
-                      ),
-                    ) 
-                  ),
+                      )),
                 )
               ],
             ),
