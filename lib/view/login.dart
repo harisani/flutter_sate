@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sate/home.dart';
+import 'package:sate/home1.dart';
+import 'package:sate/main.dart';
 import 'package:sate/view/forgetPassword.dart';
 import 'package:sate/view/signup.dart';
 
@@ -94,7 +96,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   onPressed: () {
                     Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => Home()));
+                        MaterialPageRoute(builder: (context) => Home1()));
                   },
                 )),
             Row(
