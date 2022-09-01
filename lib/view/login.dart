@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sate/home.dart';
 import 'package:sate/view/forgetPassword.dart';
 import 'package:sate/view/signup.dart';
 
@@ -52,16 +53,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: TextField(
                 controller: nameController,
                 decoration: const InputDecoration(
-                  labelStyle: TextStyle(color: Colors.grey),
-                  suffixIcon: Icon(Icons.person,
-                    color: Color.fromRGBO(175, 3, 3, 1)),
-                  border: OutlineInputBorder(),
-                  labelText: 'User Name',
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey, width: 2.0)
-                  )
-                  
-                ),
+                    labelStyle: TextStyle(color: Colors.grey),
+                    suffixIcon:
+                        Icon(Icons.person, color: Color.fromRGBO(175, 3, 3, 1)),
+                    border: OutlineInputBorder(),
+                    labelText: 'User Name',
+                    focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(color: Colors.grey, width: 2.0))),
               ),
             ),
             Container(
@@ -70,17 +69,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 obscureText: true,
                 controller: passwordController,
                 decoration: const InputDecoration(
-                  labelStyle: TextStyle(color: Colors.grey),
-                  suffixIcon: Icon(
-                    Icons.remove_red_eye,
-                    color: Color.fromRGBO(175, 3, 3, 1),
-                  ),
-                  border: OutlineInputBorder(),
-                  labelText: 'Password',
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey, width: 2.0)
-                  )
-                ),
+                    labelStyle: TextStyle(color: Colors.grey),
+                    suffixIcon: Icon(
+                      Icons.remove_red_eye,
+                      color: Color.fromRGBO(175, 3, 3, 1),
+                    ),
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
+                    focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(color: Colors.grey, width: 2.0))),
               ),
             ),
             Container(
@@ -95,8 +93,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => Home()));
                   },
                 )),
             Row(
@@ -107,10 +105,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       child: const Text(
                         'Sign Up',
                         style: TextStyle(
-                            fontSize: 15, color: Color.fromRGBO(175, 3, 3, 1),fontWeight: FontWeight.bold),
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
                       ),
                       onPressed: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (context) => SignUp()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => SignUp()));
                         //signup screen
                       },
                     ),
@@ -122,10 +123,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     child: const Text(
                       'Forgot Password',
                       style: TextStyle(
-                          fontSize: 15, color: Color.fromRGBO(175, 3, 3, 1),fontWeight: FontWeight.bold),
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: ((context) => ForgetPassoword())));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => ForgetPassoword())));
                       //signup screen
                     },
                   ),
