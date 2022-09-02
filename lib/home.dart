@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -21,7 +22,7 @@ class Home extends StatelessWidget {
                 Container(
                   height: 90,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
@@ -30,24 +31,27 @@ class Home extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(5.0),
                               child: Text("Hello Engineers!",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 14)),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 14)),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(4.0),
                               child: Text(
                                 "Joseps Luwis",
                                 style: TextStyle(
                                     color: Color.fromRGBO(249, 202, 0, 1),
-                                    fontSize: 20),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
                               ),
                             )
                           ],
                         ),
                         SizedBox(
-                          width: 110.0,
+                          width: MediaQuery.of(context).size.width * 0.36,
                         ),
                         Column(
                           children: [
@@ -67,7 +71,7 @@ class Home extends StatelessWidget {
                   child: Positioned(
                       top: 250.0,
                       child: Container(
-                        height: 150,
+                        height: 180,
                         width: MediaQuery.of(context).size.width,
                         child: Card(
                           shape: RoundedRectangleBorder(
@@ -77,89 +81,37 @@ class Home extends StatelessWidget {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(20),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: <Widget>[
-                                        SizedBox(
-                                          width: 30,
-                                        ),
-                                        Column(
-                                          children: [
-                                            Container(
-                                              child: Image(
-                                                  image: AssetImage(
-                                                      "assets/images/icon_jurnal.png")),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          width: 70,
-                                        ),
-                                        Container(
-                                          child: Image(
-                                              image: AssetImage(
-                                                  "assets/images/icon_materi.png")),
-                                        ),
-                                        SizedBox(
-                                          width: 70,
-                                        ),
-                                        Container(
-                                          child: Image(
-                                              image: AssetImage(
-                                                  "assets/images/icon_buku.png")),
-                                        ),
-                                        SizedBox(
-                                          width: 30,
-                                        ),
-                                      ],
-                                    ),
+                                padding:
+                                    const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    SvgPicture.asset(
+                                        "assets/images/icon_jurnal.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_materi.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_buku.svg"),
                                   ],
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(20),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: <Widget>[
-                                        SizedBox(
-                                          width: 25,
-                                        ),
-                                        Column(
-                                          children: [
-                                            Container(
-                                              child: Image(
-                                                  image: AssetImage(
-                                                      "assets/images/icon_web.png")),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          width: 70,
-                                        ),
-                                        Container(
-                                          child: Image(
-                                              image: AssetImage(
-                                                  "assets/images/icon_kalender.png")),
-                                        ),
-                                        SizedBox(
-                                          width: 70,
-                                        ),
-                                        Container(
-                                          child: Image(
-                                              image: AssetImage(
-                                                  "assets/images/icon_skripsi.png")),
-                                        ),
-                                        SizedBox(
-                                          width: 25,
-                                        ),
-                                      ],
-                                    ),
+                                padding:
+                                    const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    SvgPicture.asset(
+                                        "assets/images/icon_web.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_kalender.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_skripsi.svg"),
                                   ],
                                 ),
-                              ),
+                              )
                             ],
                           ),
                         ),
