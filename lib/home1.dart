@@ -82,13 +82,13 @@ class Home1 extends StatelessWidget {
                             children: [
                               Padding(
                                 padding:
-                                    const EdgeInsets.fromLTRB(40, 20, 40, 10),
+                                    const EdgeInsets.fromLTRB(20, 10, 20, 0),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     SvgPicture.asset(
-                                        "assets/images/icon_web.svg"),
+                                        "assets/images/icon_jurnal.svg"),
                                     SvgPicture.asset(
                                         "assets/images/icon_materi.svg"),
                                     SvgPicture.asset(
@@ -98,13 +98,13 @@ class Home1 extends StatelessWidget {
                               ),
                               Padding(
                                 padding:
-                                    const EdgeInsets.fromLTRB(40, 10, 40, 20),
+                                    const EdgeInsets.fromLTRB(20, 0, 20, 0),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     SvgPicture.asset(
-                                        "assets/images/icon_jurnal.svg"),
+                                        "assets/images/icon_web.svg"),
                                     SvgPicture.asset(
                                         "assets/images/icon_kalender.svg"),
                                     SvgPicture.asset(
