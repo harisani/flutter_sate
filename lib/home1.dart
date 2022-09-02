@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Home1 extends StatelessWidget {
   @override
@@ -21,7 +22,7 @@ class Home1 extends StatelessWidget {
                 Container(
                   height: 90,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
@@ -30,24 +31,27 @@ class Home1 extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(5.0),
                               child: Text("Hello Engineers!",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 14)),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 14)),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(4.0),
                               child: Text(
                                 "Joseps Luwis",
                                 style: TextStyle(
                                     color: Color.fromRGBO(249, 202, 0, 1),
-                                    fontSize: 20),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
                               ),
                             )
                           ],
                         ),
                         SizedBox(
-                          width: 110.0,
+                          width: MediaQuery.of(context).size.width * 0.36,
                         ),
                         Column(
                           children: [
@@ -67,7 +71,7 @@ class Home1 extends StatelessWidget {
                   child: Positioned(
                       top: 250.0,
                       child: Container(
-                        height: 150,
+                        height: 180,
                         width: MediaQuery.of(context).size.width,
                         child: Card(
                           shape: RoundedRectangleBorder(
@@ -77,24 +81,34 @@ class Home1 extends StatelessWidget {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(40, 20, 40,20),
+                                padding:
+                                    const EdgeInsets.fromLTRB(40, 20, 40, 10),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    Image(image: AssetImage("assets/images/icon_jurnal.png")),
-                                    Image(image: AssetImage("assets/images/icon_materi.png")),
-                                    Image(image: AssetImage("assets/images/icon_buku.png")),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_web.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_materi.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_buku.svg"),
                                   ],
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(40, 20, 40,20),
+                                padding:
+                                    const EdgeInsets.fromLTRB(40, 10, 40, 20),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    Image(image: AssetImage("assets/images/icon_web.png")),
-                                    Image(image: AssetImage("assets/images/icon_kalender.png")),
-                                    Image(image: AssetImage("assets/images/icon_skripsi.png")),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_jurnal.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_kalender.svg"),
+                                    SvgPicture.asset(
+                                        "assets/images/icon_skripsi.svg"),
                                   ],
                                 ),
                               )

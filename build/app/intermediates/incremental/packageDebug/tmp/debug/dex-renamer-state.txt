@@ -1,4 +1,4 @@
-#Thu Sep 01 13:52:37 WIB 2022
+#Fri Sep 02 09:32:25 WIB 2022
 base.0=/Users/apple/flutter/flutter_sate/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

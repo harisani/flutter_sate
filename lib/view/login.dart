@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:sate/home.dart';
 import 'package:sate/home1.dart';
 import 'package:sate/main.dart';
@@ -119,6 +120,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     ),
                   ],
                 ),
+                SizedBox(
+                  width: 60,
+                ),
                 Container(
                   margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                   child: TextButton(
@@ -141,6 +145,18 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ],
               mainAxisAlignment: MainAxisAlignment.center,
             ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Text("or login with"),
+                  ),
+                ),
+                SvgPicture.asset("assets/images/g.svg")
+              ],
+            )
           ],
         ));
   }
