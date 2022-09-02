@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
                     image: AssetImage("assets/images/bg_main.png")))),
         SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(14.0),
+            padding: const EdgeInsets.fromLTRB(14, 14, 1, 14),
             child: Column(
               children: <Widget>[
                 Container(
@@ -67,7 +67,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 30),
+                  padding: const EdgeInsets.only(top: 30, right: 13),
                   child: Positioned(
                       top: 250.0,
                       child: Container(
@@ -116,7 +116,20 @@ class Home extends StatelessWidget {
                           ),
                         ),
                       )),
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Paling Sering Dilihat",
+                    style: TextStyle(fontWeight: FontWeight.bold,color: Color.fromRGBO(249, 202, 0, 1)),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
               ],
             ),
           ),
